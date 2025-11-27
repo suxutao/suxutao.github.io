@@ -1,0 +1,32 @@
+# 忽略 Hugo 构建输出的完整目录
+/public/
+
+# 忽略 Hugo 生成的资源缓存目录
+/resources/_gen/
+
+# 忽略 Hugo 为 JS 智能感知生成的配置文件 [citation:1]
+/assets/jsconfig.json
+
+# 忽略 Hugo 构建统计信息文件（用于 CSS 优化等） [citation:1]
+/hugo_stats.json
+
+# 忽略 Hugo 构建过程中的临时锁文件 [citation:1][citation:5]
+/.hugo_build.lock
+
+# 忽略 Hugo 模块缓存
+/.hugo_modules/
+
+# 忽略操作系统的临时文件 [citation:10]
+.DS_Store
+Thumbs.db
+
+# 忽略编辑器或 IDE 的配置目录 [citation:6]
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 忽略项目根目录下的 Hugo 可执行文件（可根据需要取消注释） [citation:5]
+# hugo.exe
+# hugo.darwin
+# hugo.linux
