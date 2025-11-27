@@ -12,7 +12,7 @@ on:
 
 # 设置GITHUB_TOKEN的权限，以允许部署到GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
