@@ -1,0 +1,24 @@
+<!-- 根目录/layouts/partials/math.html（KaTeX本地化版本） -->
+{{ if or .Params.math .Site.Params.math }}
+<!-- 本地加载KaTeX核心样式（路径对应static/js/katex/） -->
+<link rel="stylesheet" href="/js/katex/katex.min.css">
+
+<!-- 本地加载KaTeX核心脚本（defer：异步加载，不阻塞页面） -->
+<script defer src="/js/katex/katex.min.js"></script>
+
+<!-- 本地加载自动渲染扩展 -->
+<script defer src="/js/katex/contrib/auto-render.min.js"></script>
+
+<!-- 触发公式渲染（和教程逻辑一致，匹配$/$、$$/$$分隔符） -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$", right: "$", display: false},  // 行内公式（匹配你的$...$）
+        {left: "$$", right: "$$", display: true}  // 块级公式（匹配你的$$...$$）
+      ],
+      throwOnError: false  // 忽略小语法错误，避免渲染失败
+    });
+  });
+</script>
+{{ end }}

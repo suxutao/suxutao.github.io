@@ -22,8 +22,8 @@ languages:
 
 services:
     # Change it to your Disqus shortname before using
-    disqus:
-        shortname: "Stack"
+    # disqus:
+    #     shortname: "Stack"
     # GA Tracking ID
     googleAnalytics:
         id:
@@ -40,15 +40,14 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
-
+    favicon: /favicon.ico
     footer:
-        since: 2020
+        since: 2025
         customText:
 
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: 2006年01月02日
+        lastUpdated: 2006年01月02日 15点04分
 
     sidebar:
         emoji: 🚩
@@ -59,16 +58,16 @@ params:
             src: img/avatar.png
 
     article:
-        math: false
+        math: math
         toc: true
         readingTime: true
         license:
-            enabled: true
+            enabled: false
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
         enabled: true
-        provider: disqus
+        provider: giscus
 
         disqusjs:
             shortname:
@@ -129,15 +128,16 @@ params:
             siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
 
         giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
+            repo: suxutao/blog-comments
+            repoID: R_kgDOQks3Xw
+            category: General
+            categoryID: DIC_kwDOQks3X84CziJT
+            mapping: pathname
             lightTheme:
             darkTheme:
             reactionsEnabled: 1
             emitMetadata: 0
+            lazyLoad: true
 
         gitalk:
             owner:
@@ -242,6 +242,8 @@ markup:
                     inline:
                         - - \(
                           - \)
+                        - - $
+                          - $
         renderer:
             ## Set to true if you have HTML content inside Markdown
             unsafe: true
