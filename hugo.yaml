@@ -202,14 +202,22 @@ menu:
         - identifier: github
           name: GitHub
           url: https://github.com/suxutao
+          weight: 1
           params:
               icon: brand-github
 
         - identifier: Leetcode
           name: LeetCode
           url: https://leetcode.cn/u/festive-jonesflk/
+          weight: 2
           params:
               icon: brand-leetcode
+
+        - identifier: CSDN
+          name: CSDN
+          url: https://blog.csdn.net/Wait_Godot
+          params:
+              icon: brand-csdn
 
         - identifier: xitu
           name: 稀土掘金
