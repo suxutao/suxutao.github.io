@@ -8,7 +8,7 @@ categories: ["项目开发"]
 
 分别用两种方法生成依赖文件
 
-# 1.freeze
+## freeze
 
 命令：
 
@@ -21,7 +21,7 @@ pip freeze > requirements.txt
 优点：python内置工具，会生成当前环境所有的依赖包
 缺点：可能把项目中没用的依赖包也包括进去了
 
-# 2.pipreqs
+## pipreqs
 需要先安装库：
 
 ```bash
@@ -39,7 +39,7 @@ pipreqs ./  --force --use-local --ignore .venv
 优点：只包括项目需要的依赖包，无用的依赖或间接依赖（依赖的依赖）不会被包括进去
 缺点：生成的包可能不准确
 
-# 安装依赖
+## 安装依赖
 
 有了这个文件之后就可以一键安装依赖
 
